@@ -1,5 +1,4 @@
 #pragma once
-
 #include "Exception.h"
 
 class WrongFileContentException : public Exception

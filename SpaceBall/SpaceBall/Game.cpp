@@ -43,4 +43,3 @@ void Game::Render()
 	_window->clear();
 	_window->display();
 }
-

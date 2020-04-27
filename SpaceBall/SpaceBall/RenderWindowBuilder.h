@@ -33,4 +33,3 @@ class RenderWindowBuilder
 	private:
 		void InitializeWindowSettings();
 };
-

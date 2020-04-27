@@ -21,4 +21,3 @@ class Game
 		void Update();
 		void Render();
 };
-

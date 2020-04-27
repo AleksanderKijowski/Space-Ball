@@ -9,4 +9,3 @@ class SupportedKeysMapBuilder
 
 		Map<string, int>* BuildSupportedKeysMap();
 };
-

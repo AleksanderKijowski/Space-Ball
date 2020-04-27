@@ -5,10 +5,6 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="Resources">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
@@ -16,8 +12,26 @@
     <Filter Include="Source Files\Source">
       <UniqueIdentifier>{66366b6e-70e9-4e97-a2fe-084d9273434a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Precompiled headers">
+    <Filter Include="Source Files\Source\Game class">
+      <UniqueIdentifier>{58e627e3-1d63-47d2-b69f-777e0cd83a89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Providers">
+      <UniqueIdentifier>{875ba8e4-b3cd-460e-9c46-bb4887e999d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure">
+      <UniqueIdentifier>{06f61bbe-745c-4b21-8a2f-98eadb8707cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Exceptions">
+      <UniqueIdentifier>{cfc8b206-f077-4986-a9c9-0690a85afc6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Providers\RenderWindowBuilder">
+      <UniqueIdentifier>{bce28150-799b-47a7-8ed0-7445b5b212d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompiled headers">
       <UniqueIdentifier>{78ffab35-b31b-4904-b900-51375fd00d63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Providers\SupportedKeysMapBuilder">
+      <UniqueIdentifier>{fdbde052-3110-477f-b4f1-286251a410bd}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -25,12 +39,48 @@
       <Filter>Source Files\Source</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
-      <Filter>Header Files\Precompiled headers</Filter>
+      <Filter>Precompiled headers</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files\Source\Game class</Filter>
+    </ClCompile>
+    <ClCompile Include="Exception.cpp">
+      <Filter>Infrastructure</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderWindowBuilder.cpp">
+      <Filter>Source Files\Providers\RenderWindowBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="SupportedKeysMapBuilder.cpp">
+      <Filter>Source Files\Providers\SupportedKeysMapBuilder</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
-      <Filter>Header Files\Precompiled headers</Filter>
+      <Filter>Precompiled headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Source Files\Source\Game class</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigPaths.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="FileNotFoundException.h">
+      <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception.h">
+      <Filter>Infrastructure</Filter>
+    </ClInclude>
+    <ClInclude Include="WrongFileContentException.h">
+      <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderWindowBuilder.h">
+      <Filter>Source Files\Providers\RenderWindowBuilder</Filter>
+    </ClInclude>
+    <ClInclude Include="SupportedKeysMapBuilder.h">
+      <Filter>Source Files\Providers\SupportedKeysMapBuilder</Filter>
+    </ClInclude>
+    <ClInclude Include="FailedWindowInitializationException.h">
+      <Filter>Exceptions</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,2 +1,5 @@
-﻿  Main.Cpp
+﻿  Game.cpp
+  Main.Cpp
+  RenderWindowBuilder.cpp
+  Generating Code...
   SpaceBall.vcxproj -> C:\Users\AKijowski\source\repos\Space-Ball\SpaceBall\Debug\SpaceBall.exe

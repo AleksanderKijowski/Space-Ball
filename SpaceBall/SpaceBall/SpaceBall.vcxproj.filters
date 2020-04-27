@@ -16,10 +16,21 @@
     <Filter Include="Source Files\Source">
       <UniqueIdentifier>{66366b6e-70e9-4e97-a2fe-084d9273434a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Precompiled headers">
+      <UniqueIdentifier>{78ffab35-b31b-4904-b900-51375fd00d63}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.Cpp">
       <Filter>Source Files\Source</Filter>
     </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Header Files\Precompiled headers</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files\Precompiled headers</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

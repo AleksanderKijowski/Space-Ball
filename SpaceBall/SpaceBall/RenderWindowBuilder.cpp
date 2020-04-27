@@ -12,7 +12,7 @@ sf::RenderWindow * RenderWindowBuilder::BuildRenderWindow()
 	result->setFramerateLimit(_settings.FrameRateLimit);
 	result->setVerticalSyncEnabled(_settings.VerticalSyncEnabled);
 
-	return result;
+	return result != nullptr ? result : throw FailedWindowInitializationFailedException();
 }
 
 void RenderWindowBuilder::InitializeWindowSettings()
@@ -48,4 +48,6 @@ void RenderWindowBuilder::InitializeWindowSettings()
 	{
 		throw FileNotFoundException(path);
 	}
+
+	settingsFile.close();
 }

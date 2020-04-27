@@ -12,9 +12,6 @@
     <Filter Include="Source Files\Source">
       <UniqueIdentifier>{66366b6e-70e9-4e97-a2fe-084d9273434a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Precompiled headers">
-      <UniqueIdentifier>{78ffab35-b31b-4904-b900-51375fd00d63}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Source\Game class">
       <UniqueIdentifier>{58e627e3-1d63-47d2-b69f-777e0cd83a89}</UniqueIdentifier>
     </Filter>
@@ -30,13 +27,19 @@
     <Filter Include="Source Files\Providers\RenderWindowBuilder">
       <UniqueIdentifier>{bce28150-799b-47a7-8ed0-7445b5b212d7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Precompiled headers">
+      <UniqueIdentifier>{78ffab35-b31b-4904-b900-51375fd00d63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Providers\SupportedKeysMapBuilder">
+      <UniqueIdentifier>{fdbde052-3110-477f-b4f1-286251a410bd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.Cpp">
       <Filter>Source Files\Source</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
-      <Filter>Source Files\Precompiled headers</Filter>
+      <Filter>Precompiled headers</Filter>
     </ClCompile>
     <ClCompile Include="Game.cpp">
       <Filter>Source Files\Source\Game class</Filter>
@@ -47,10 +50,13 @@
     <ClCompile Include="RenderWindowBuilder.cpp">
       <Filter>Source Files\Providers\RenderWindowBuilder</Filter>
     </ClCompile>
+    <ClCompile Include="SupportedKeysMapBuilder.cpp">
+      <Filter>Source Files\Providers\SupportedKeysMapBuilder</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
-      <Filter>Source Files\Precompiled headers</Filter>
+      <Filter>Precompiled headers</Filter>
     </ClInclude>
     <ClInclude Include="Game.h">
       <Filter>Source Files\Source\Game class</Filter>
@@ -69,6 +75,12 @@
     </ClInclude>
     <ClInclude Include="RenderWindowBuilder.h">
       <Filter>Source Files\Providers\RenderWindowBuilder</Filter>
+    </ClInclude>
+    <ClInclude Include="SupportedKeysMapBuilder.h">
+      <Filter>Source Files\Providers\SupportedKeysMapBuilder</Filter>
+    </ClInclude>
+    <ClInclude Include="FailedWindowInitializationException.h">
+      <Filter>Exceptions</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

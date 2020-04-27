@@ -28,6 +28,7 @@
 #define string std::string
 #define List std::list
 #define Stack std::stack
+#define Map std::map
 #define var auto
 
 // Resources

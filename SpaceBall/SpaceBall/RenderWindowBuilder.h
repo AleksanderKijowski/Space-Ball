@@ -1,6 +1,7 @@
 #pragma once
 #include "FileNotFoundException.h"
 #include "WrongFileContentException.h"
+#include "FailedWindowInitializationException.h"
 
 class RenderWindowBuilder
 {

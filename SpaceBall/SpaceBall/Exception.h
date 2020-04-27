@@ -2,8 +2,8 @@
 
 class Exception : public std::exception
 {
-private:
-	string _message;
+	private:
+		string _message;
 	
 	public:
 		Exception(string message);

@@ -131,14 +131,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Exception.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="Main.Cpp" />
+    <ClCompile Include="RenderWindowBuilder.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ConfigPaths.h" />
+    <ClInclude Include="Exception.h" />
+    <ClInclude Include="FileNotFoundException.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="RenderWindowBuilder.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="WrongFileContentException.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -12,26 +12,26 @@
     <Filter Include="Source Files\Source">
       <UniqueIdentifier>{66366b6e-70e9-4e97-a2fe-084d9273434a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Source\Game class">
-      <UniqueIdentifier>{58e627e3-1d63-47d2-b69f-777e0cd83a89}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Providers">
-      <UniqueIdentifier>{875ba8e4-b3cd-460e-9c46-bb4887e999d4}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Infrastructure">
       <UniqueIdentifier>{06f61bbe-745c-4b21-8a2f-98eadb8707cb}</UniqueIdentifier>
     </Filter>
     <Filter Include="Exceptions">
       <UniqueIdentifier>{cfc8b206-f077-4986-a9c9-0690a85afc6b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Providers\RenderWindowBuilder">
-      <UniqueIdentifier>{bce28150-799b-47a7-8ed0-7445b5b212d7}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Precompiled headers">
       <UniqueIdentifier>{78ffab35-b31b-4904-b900-51375fd00d63}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Providers\SupportedKeysMapBuilder">
-      <UniqueIdentifier>{fdbde052-3110-477f-b4f1-286251a410bd}</UniqueIdentifier>
+    <Filter Include="Infrastructure\Exception Handler">
+      <UniqueIdentifier>{db4ed758-17c9-447d-b465-2b83c81c81bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Logger">
+      <UniqueIdentifier>{65c4727c-5243-43da-a9f6-bc9f7160082d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Providers">
+      <UniqueIdentifier>{875ba8e4-b3cd-460e-9c46-bb4887e999d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Providers\Builders">
+      <UniqueIdentifier>{36d32198-0d84-407e-a3b8-d8f3d2e04d34}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -41,46 +41,52 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Precompiled headers</Filter>
     </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Source Files\Source\Game class</Filter>
-    </ClCompile>
-    <ClCompile Include="Exception.cpp">
-      <Filter>Infrastructure</Filter>
-    </ClCompile>
-    <ClCompile Include="RenderWindowBuilder.cpp">
-      <Filter>Source Files\Providers\RenderWindowBuilder</Filter>
-    </ClCompile>
-    <ClCompile Include="SupportedKeysMapBuilder.cpp">
-      <Filter>Source Files\Providers\SupportedKeysMapBuilder</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
       <Filter>Precompiled headers</Filter>
     </ClInclude>
-    <ClInclude Include="Game.h">
-      <Filter>Source Files\Source\Game class</Filter>
-    </ClInclude>
     <ClInclude Include="ConfigPaths.h">
       <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="FileNotFoundException.h">
+    <ClInclude Include="ExceptionHandler.hpp">
+      <Filter>Infrastructure\Exception Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="IExceptionHandler.hpp">
+      <Filter>Infrastructure\Exception Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="FailedWindowInitializationException.hpp">
       <Filter>Exceptions</Filter>
     </ClInclude>
-    <ClInclude Include="Exception.h">
-      <Filter>Infrastructure</Filter>
-    </ClInclude>
-    <ClInclude Include="WrongFileContentException.h">
+    <ClInclude Include="FileNotFoundException.hpp">
       <Filter>Exceptions</Filter>
     </ClInclude>
-    <ClInclude Include="RenderWindowBuilder.h">
-      <Filter>Source Files\Providers\RenderWindowBuilder</Filter>
-    </ClInclude>
-    <ClInclude Include="SupportedKeysMapBuilder.h">
-      <Filter>Source Files\Providers\SupportedKeysMapBuilder</Filter>
-    </ClInclude>
-    <ClInclude Include="FailedWindowInitializationException.h">
+    <ClInclude Include="WrongFileContentException.hpp">
       <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception.hpp">
+      <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="ILogger.hpp">
+      <Filter>Infrastructure\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.hpp">
+      <Filter>Infrastructure\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="SupportedKeysMapBuilder.hpp">
+      <Filter>Providers\Builders</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderWindowBuilder.hpp">
+      <Filter>Providers\Builders</Filter>
+    </ClInclude>
+    <ClInclude Include="ExceptionHandlerBuilder.hpp">
+      <Filter>Providers\Builders</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.hpp">
+      <Filter>Source Files\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="DateTimeProvider.hpp">
+      <Filter>Providers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

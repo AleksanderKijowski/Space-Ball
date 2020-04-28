@@ -1,6 +1,5 @@
 #pragma once
 
-
 // SFML libraries
 #include <SFML\Graphics.hpp>
 #include <SFML\Audio.hpp>
@@ -17,6 +16,7 @@
 #include <Windows.h>
 #include <memory>
 #include <exception>
+#include <stdio.h>
 	
 // Containers
 #include <list>

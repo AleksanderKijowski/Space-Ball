@@ -33,6 +33,12 @@
     <Filter Include="Source Files\Providers\SupportedKeysMapBuilder">
       <UniqueIdentifier>{fdbde052-3110-477f-b4f1-286251a410bd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Infrastructure\Exception Handler">
+      <UniqueIdentifier>{db4ed758-17c9-447d-b465-2b83c81c81bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Providers\ExceptionHandlerBuilder">
+      <UniqueIdentifier>{ef407dc9-544b-405e-90cf-a283ab7913b9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.Cpp">
@@ -41,46 +47,43 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Precompiled headers</Filter>
     </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Source Files\Source\Game class</Filter>
-    </ClCompile>
-    <ClCompile Include="Exception.cpp">
-      <Filter>Infrastructure</Filter>
-    </ClCompile>
-    <ClCompile Include="RenderWindowBuilder.cpp">
-      <Filter>Source Files\Providers\RenderWindowBuilder</Filter>
-    </ClCompile>
-    <ClCompile Include="SupportedKeysMapBuilder.cpp">
-      <Filter>Source Files\Providers\SupportedKeysMapBuilder</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
       <Filter>Precompiled headers</Filter>
     </ClInclude>
-    <ClInclude Include="Game.h">
-      <Filter>Source Files\Source\Game class</Filter>
-    </ClInclude>
     <ClInclude Include="ConfigPaths.h">
       <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="FileNotFoundException.h">
-      <Filter>Exceptions</Filter>
+    <ClInclude Include="ExceptionHandler.hpp">
+      <Filter>Infrastructure\Exception Handler</Filter>
     </ClInclude>
-    <ClInclude Include="Exception.h">
-      <Filter>Infrastructure</Filter>
+    <ClInclude Include="IExceptionHandler.hpp">
+      <Filter>Infrastructure\Exception Handler</Filter>
     </ClInclude>
-    <ClInclude Include="WrongFileContentException.h">
-      <Filter>Exceptions</Filter>
+    <ClInclude Include="ExceptionHandlerBuilder.hpp">
+      <Filter>Source Files\Providers\ExceptionHandlerBuilder</Filter>
     </ClInclude>
-    <ClInclude Include="RenderWindowBuilder.h">
+    <ClInclude Include="RenderWindowBuilder.hpp">
       <Filter>Source Files\Providers\RenderWindowBuilder</Filter>
     </ClInclude>
-    <ClInclude Include="SupportedKeysMapBuilder.h">
+    <ClInclude Include="SupportedKeysMapBuilder.hpp">
       <Filter>Source Files\Providers\SupportedKeysMapBuilder</Filter>
     </ClInclude>
-    <ClInclude Include="FailedWindowInitializationException.h">
+    <ClInclude Include="FailedWindowInitializationException.hpp">
       <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="FileNotFoundException.hpp">
+      <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="WrongFileContentException.hpp">
+      <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception.hpp">
+      <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.hpp">
+      <Filter>Source Files\Source\Game class</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

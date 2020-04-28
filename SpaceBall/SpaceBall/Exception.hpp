@@ -16,4 +16,12 @@ public:
 	{
 		return _message;
 	}
+
+	virtual List<string> GetLogMessage()
+	{
+		var result = List<string>();
+		result.push_back(ToString());
+
+		return result;
+	}
 };

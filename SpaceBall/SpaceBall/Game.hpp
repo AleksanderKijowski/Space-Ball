@@ -17,14 +17,13 @@ public:
 	Game()
 	{
 		_exceptionHandler.reset(ExceptionHandlerBuilder().BuildExceptionHandler());
-		_window.reset(RenderWindowBuilder().BuildRenderWindow());
-		_supportedKeys.reset(SupportedKeysMapBuilder().BuildSupportedKeysMap());
 	}
+	
 	virtual ~Game() = default;
 
 	void Run()
 	{
-		if (_exceptionHandler != nullptr)
+		if (_exceptionHandler != nullptr && Initialize())
 		{
 			RunGameLoop();
 		}
@@ -56,8 +55,8 @@ private:
 	void RunGameLoop()
 	{
 		try
-		{
-			while (_window->isOpen())
+		{	
+			while (_window != nullptr && _window->isOpen())
 			{
 				UpdateEvents();
 				Update();
@@ -67,6 +66,21 @@ private:
 		catch (Exception* exception)
 		{
 			_exceptionHandler->HandleException(exception);
+		}
+	}
+
+	bool Initialize()
+	{
+		try
+		{
+			_window.reset(RenderWindowBuilder().BuildRenderWindow());
+			_supportedKeys.reset(SupportedKeysMapBuilder().BuildSupportedKeysMap());
+			return true;
+		}
+		catch (Exception* exception)
+		{
+			_exceptionHandler->HandleException(exception);
+			return false;
 		}
 	}
 };

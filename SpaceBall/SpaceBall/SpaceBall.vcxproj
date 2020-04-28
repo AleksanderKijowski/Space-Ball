@@ -78,6 +78,7 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)\SpaceBall\Resources\SFML\include</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions) _CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -106,6 +107,7 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)\SpaceBall\Resources\SFML\include</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions) _CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,6 +141,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ConfigPaths.h" />
+    <ClInclude Include="DateTimeProvider.hpp" />
     <ClInclude Include="Exception.hpp" />
     <ClInclude Include="ExceptionHandler.hpp" />
     <ClInclude Include="ExceptionHandlerBuilder.hpp" />
@@ -146,6 +149,8 @@
     <ClInclude Include="FileNotFoundException.hpp" />
     <ClInclude Include="Game.hpp" />
     <ClInclude Include="IExceptionHandler.hpp" />
+    <ClInclude Include="ILogger.hpp" />
+    <ClInclude Include="Logger.hpp" />
     <ClInclude Include="RenderWindowBuilder.hpp" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="SupportedKeysMapBuilder.hpp" />

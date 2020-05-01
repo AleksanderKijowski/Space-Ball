@@ -9,7 +9,7 @@ protected:
 	std::unique_ptr<ILogger> _logger;
 	
 public:
-	virtual void HandleException(Exception* exception) = 0;
+	virtual void HandleException(Exception* exception) abstract;
 
 protected:
 	IExceptionHandler(ILogger* logger)

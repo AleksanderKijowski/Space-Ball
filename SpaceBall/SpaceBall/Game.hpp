@@ -8,7 +8,6 @@ class Game
 private:
 	std::unique_ptr<IExceptionHandler> _exceptionHandler;
 	std::unique_ptr<GameContext> _context;
-	sf::Event _event;
 
 public:
 	Game()
@@ -36,17 +35,17 @@ public:
 	}
 
 private:
-	void Update()
+	void Update() const
 	{
 		_context->GetCurrentAppState()->Update();
 	}
 	
-	void Render()
+	void Render() const
 	{
 		_context->GetCurrentAppState()->Render();
 	}
 
-	void RunGameLoop()
+	void RunGameLoop() const
 	{
 		while (!_context->IsAppEnding())
 		{

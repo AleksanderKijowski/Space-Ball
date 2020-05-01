@@ -1,6 +1,8 @@
 #pragma once
 #include "stdafx.h"
 #include "IState.hpp"
+#include "RenderWindowBuilder.hpp"
+#include "SupportedKeysMapBuilder.hpp"
 
 class GameContext
 {
@@ -23,6 +25,7 @@ public:
 	{
 		_window.reset(RenderWindowBuilder().BuildRenderWindow());
 		_supportedKeys.reset(SupportedKeysMapBuilder().BuildSupportedKeysMap());
+		_statesStack.reset(new Stack<std::shared_ptr<IState>>());
 	}
 	
 	~GameContext() = default;

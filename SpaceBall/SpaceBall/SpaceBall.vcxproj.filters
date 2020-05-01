@@ -33,6 +33,9 @@
     <Filter Include="Providers\Builders">
       <UniqueIdentifier>{36d32198-0d84-407e-a3b8-d8f3d2e04d34}</UniqueIdentifier>
     </Filter>
+    <Filter Include="States">
+      <UniqueIdentifier>{e633e797-607b-48a0-916f-bdd63b9b19ef}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.Cpp">
@@ -87,6 +90,12 @@
     </ClInclude>
     <ClInclude Include="DateTimeProvider.hpp">
       <Filter>Providers</Filter>
+    </ClInclude>
+    <ClInclude Include="GameContext.hpp">
+      <Filter>Source Files\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="IState.hpp">
+      <Filter>States</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

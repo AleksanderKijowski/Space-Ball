@@ -7,7 +7,7 @@ protected:
 	bool _isInitialized;
 	
 public:
-	virtual void Log(List<string> text) = 0;
+	virtual void Log(List<string> text) abstract;
 	
 	bool GetIsInitialized() const
 	{

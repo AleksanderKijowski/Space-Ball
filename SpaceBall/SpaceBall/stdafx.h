@@ -30,6 +30,7 @@
 #define Stack std::stack
 #define Map std::map
 #define var auto
+#define abstract = 0
 
 // Resources
 #include "ConfigPaths.h"

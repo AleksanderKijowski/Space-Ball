@@ -148,8 +148,10 @@
     <ClInclude Include="FailedWindowInitializationException.hpp" />
     <ClInclude Include="FileNotFoundException.hpp" />
     <ClInclude Include="Game.hpp" />
+    <ClInclude Include="GameContext.hpp" />
     <ClInclude Include="IExceptionHandler.hpp" />
     <ClInclude Include="ILogger.hpp" />
+    <ClInclude Include="IState.hpp" />
     <ClInclude Include="Logger.hpp" />
     <ClInclude Include="RenderWindowBuilder.hpp" />
     <ClInclude Include="stdafx.h" />

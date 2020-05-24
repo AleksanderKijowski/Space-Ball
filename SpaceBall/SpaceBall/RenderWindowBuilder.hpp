@@ -35,9 +35,11 @@ public:
 
 	sf::RenderWindow* BuildRenderWindow()
 	{
-		var result = new sf::RenderWindow(sf::VideoMode(_settings.Width, _settings.Height), _settings.Title);
+		var result = new sf::RenderWindow(sf::VideoMode(_settings.Width, _settings.Height), _settings.Title, sf::Style::Fullscreen);
 		result->setFramerateLimit(_settings.FrameRateLimit);
 		result->setVerticalSyncEnabled(_settings.VerticalSyncEnabled);
+		result->clear();
+		result->display();
 
 		return result != nullptr ? result : throw new FailedWindowInitializationFailedException();
 	}

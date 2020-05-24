@@ -22,32 +22,32 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{AD9C9D5F-2D9B-4A09-9A7B-B181E872E936}</ProjectGuid>
     <RootNamespace>SpaceBall</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -149,10 +149,16 @@
     <ClInclude Include="FileNotFoundException.hpp" />
     <ClInclude Include="Game.hpp" />
     <ClInclude Include="GameContext.hpp" />
+    <ClInclude Include="GameContextShared.hpp" />
     <ClInclude Include="IExceptionHandler.hpp" />
     <ClInclude Include="ILogger.hpp" />
     <ClInclude Include="IState.hpp" />
     <ClInclude Include="Logger.hpp" />
+    <ClInclude Include="MainMenuContext.hpp" />
+    <ClInclude Include="MainMenuKeyBindsBuilder.hpp" />
+    <ClInclude Include="MainMenuState.hpp" />
+    <ClInclude Include="MainMenuStateBuilder.hpp" />
+    <ClInclude Include="MainMenuUpdateParams.hpp" />
     <ClInclude Include="RenderWindowBuilder.hpp" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="SupportedKeysMapBuilder.hpp" />

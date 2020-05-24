@@ -36,6 +36,9 @@
     <Filter Include="States">
       <UniqueIdentifier>{e633e797-607b-48a0-916f-bdd63b9b19ef}</UniqueIdentifier>
     </Filter>
+    <Filter Include="States\MainMenu">
+      <UniqueIdentifier>{d8d8246c-9a96-422c-bc16-40511ae46960}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.Cpp">
@@ -96,6 +99,24 @@
     </ClInclude>
     <ClInclude Include="IState.hpp">
       <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuState.hpp">
+      <Filter>States\MainMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuContext.hpp">
+      <Filter>States\MainMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuKeyBindsBuilder.hpp">
+      <Filter>States\MainMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuUpdateParams.hpp">
+      <Filter>States\MainMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuStateBuilder.hpp">
+      <Filter>States\MainMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="GameContextShared.hpp">
+      <Filter>Source Files\Source</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

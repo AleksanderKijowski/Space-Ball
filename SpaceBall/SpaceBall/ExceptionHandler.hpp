@@ -17,6 +17,8 @@ public:
 		if (exception != nullptr)
 		{
 			_logger->Log(exception->GetLogMessage());
+			delete exception;
+			std::cerr << "Exception occured. See logs to for details." << std::endl;
 		}
 	}
 	

@@ -1,2 +1,3 @@
 ﻿  Main.Cpp
-  SpaceBall.vcxproj -> C:\Users\AKijowski\source\repos\Space-Ball\SpaceBall\Debug\SpaceBall.exe
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\MainMenuStateBuilder.hpp(17,2): warning C4091: 'static ': ignored on left of 'MainMenuStateBuilder' when no variable is declared
+  SpaceBall.vcxproj -> C:\Users\07ole\source\repos\Space-Ball\SpaceBall\Debug\SpaceBall.exe

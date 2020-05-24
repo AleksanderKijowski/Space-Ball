@@ -140,6 +140,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Button.hpp" />
     <ClInclude Include="ConfigPaths.h" />
     <ClInclude Include="DateTimeProvider.hpp" />
     <ClInclude Include="Exception.hpp" />
@@ -152,6 +153,7 @@
     <ClInclude Include="GameContextShared.hpp" />
     <ClInclude Include="IExceptionHandler.hpp" />
     <ClInclude Include="ILogger.hpp" />
+    <ClInclude Include="IntersectionProvider.hpp" />
     <ClInclude Include="IState.hpp" />
     <ClInclude Include="Logger.hpp" />
     <ClInclude Include="MainMenuContext.hpp" />

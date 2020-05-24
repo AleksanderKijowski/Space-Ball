@@ -9,4 +9,9 @@ public:
 	{
 		PushNewState(MainMenuStateBuilder().Build(this, _window, _supportedKeys));
 	}
+
+	void Display()
+	{
+		_window->display();
+	}
 };

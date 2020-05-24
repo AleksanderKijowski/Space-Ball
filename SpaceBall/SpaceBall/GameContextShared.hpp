@@ -63,6 +63,6 @@ public:
 
 	MainMenuUpdateParams GetMainMenuUpdateParams() const
 	{
-		return MainMenuUpdateParams(sf::Mouse::isButtonPressed(sf::Mouse::Left), sf::Mouse::getPosition());
+		return MainMenuUpdateParams(sf::Mouse::isButtonPressed(sf::Mouse::Left), sf::Mouse::getPosition(*_window));
 	}
 };

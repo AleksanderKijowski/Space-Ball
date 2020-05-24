@@ -39,6 +39,9 @@
     <Filter Include="States\MainMenu">
       <UniqueIdentifier>{d8d8246c-9a96-422c-bc16-40511ae46960}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Infrastructure\Buttons">
+      <UniqueIdentifier>{ee779fe1-67c3-4bd7-9a3a-15e676cd236a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.Cpp">
@@ -117,6 +120,12 @@
     </ClInclude>
     <ClInclude Include="GameContextShared.hpp">
       <Filter>Source Files\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.hpp">
+      <Filter>Infrastructure\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="IntersectionProvider.hpp">
+      <Filter>Infrastructure</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

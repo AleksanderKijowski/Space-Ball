@@ -43,6 +43,7 @@ private:
 	void Render() const
 	{
 		_context->GetCurrentAppState()->Render();
+		_context->Display();
 	}
 
 	void RunGameLoop() const

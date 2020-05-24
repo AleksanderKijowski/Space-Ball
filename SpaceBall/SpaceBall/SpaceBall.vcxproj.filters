@@ -127,5 +127,29 @@
     <ClInclude Include="IntersectionProvider.hpp">
       <Filter>Infrastructure</Filter>
     </ClInclude>
+    <ClInclude Include="MainMenuButtonList.hpp">
+      <Filter>States\MainMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuButtonTexts.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="ButtonState.hpp">
+      <Filter>Infrastructure\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="ButtonParams.hpp">
+      <Filter>Infrastructure\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="IOption.hpp">
+      <Filter>Infrastructure\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuOptions.hpp">
+      <Filter>States\MainMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="TextButton.hpp">
+      <Filter>Infrastructure\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="TextButtonParams.hpp">
+      <Filter>Infrastructure\Buttons</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

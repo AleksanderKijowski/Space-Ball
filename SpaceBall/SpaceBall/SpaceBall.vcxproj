@@ -141,6 +141,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Button.hpp" />
+    <ClInclude Include="ButtonParams.hpp" />
+    <ClInclude Include="ButtonState.hpp" />
     <ClInclude Include="ConfigPaths.h" />
     <ClInclude Include="DateTimeProvider.hpp" />
     <ClInclude Include="Exception.hpp" />
@@ -154,16 +156,22 @@
     <ClInclude Include="IExceptionHandler.hpp" />
     <ClInclude Include="ILogger.hpp" />
     <ClInclude Include="IntersectionProvider.hpp" />
+    <ClInclude Include="IOption.hpp" />
     <ClInclude Include="IState.hpp" />
     <ClInclude Include="Logger.hpp" />
+    <ClInclude Include="MainMenuButtonList.hpp" />
+    <ClInclude Include="MainMenuButtonTexts.h" />
     <ClInclude Include="MainMenuContext.hpp" />
     <ClInclude Include="MainMenuKeyBindsBuilder.hpp" />
+    <ClInclude Include="MainMenuOptions.hpp" />
     <ClInclude Include="MainMenuState.hpp" />
     <ClInclude Include="MainMenuStateBuilder.hpp" />
     <ClInclude Include="MainMenuUpdateParams.hpp" />
     <ClInclude Include="RenderWindowBuilder.hpp" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="SupportedKeysMapBuilder.hpp" />
+    <ClInclude Include="TextButton.hpp" />
+    <ClInclude Include="TextButtonParams.hpp" />
     <ClInclude Include="WrongFileContentException.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

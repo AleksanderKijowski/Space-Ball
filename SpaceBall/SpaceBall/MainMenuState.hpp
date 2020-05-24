@@ -7,9 +7,6 @@ class MainMenuState : public IState, public MainMenuContext
 {
 private:
 	Button* button;
-	sf::Color* normal;
-	sf::Color* hover;
-	sf::Color* clicked;
 
 public:
 	MainMenuState(
@@ -18,38 +15,45 @@ public:
 		std::shared_ptr<Map<string, int>> supportedKeys)
 		: IState(), MainMenuContext(context, window, supportedKeys)
 	{
-		normal = new sf::Color(sf::Color::Blue);
-		hover = new sf::Color(sf::Color::Green);
-		clicked = new sf::Color(sf::Color::Cyan);
-
-		var params = ButtonParams();
-		params.Size = sf::Vector2f(100, 100);
-		params.Position = sf::Vector2f(100, 100);
-		params.NormalColor = normal;
-		params.HoverColor = hover;
-		params.ClickedColor = clicked;
-
-		button = new Button(params);
 	}
 
 	virtual void Update() override
 	{
 		var params = _context->GetMainMenuUpdateParams();
 
-		for (var key = _keyBinds->begin(); key != _keyBinds->end(); key++)
+		switch (_port->Get())
 		{
-			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key(key->second)))
-			{
-				HandleToPort(key);
-			}
-		}
+			case unset:
+				UpdateKeys();
+				UpdateButtons(params);
+				break;
 
-		button->Update(params.MouseCoordinates, params.MouseClicked);
+			case newGame:
+				_port->Reset();
+				break;
+
+			case build:
+				_port->Reset();
+				break;
+
+			case settings:
+				_port->Reset();
+				break;
+
+			case exitState:
+				ExitKeyPressed();
+				break;
+
+			default:
+				_port->Reset();
+				// ToDo: Add new expetion type.
+				break;
+		}
 	}
 
 	virtual void Render() override
 	{
-		button->Render(_window);
+		_buttonList->Render(_window);
 	}
 
 private:
@@ -63,6 +67,22 @@ private:
 
 	void ExitKeyPressed()
 	{
+		// ToDo: Add message box and then switch to exit or reset port
 		_window->close();
+	}
+
+	void UpdateKeys()
+	{
+		for (var key = _keyBinds->begin(); key != _keyBinds->end(); key++)
+		{
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key(key->second)))
+			{
+				HandleToPort(key);
+			}
+		}
+	}
+	void UpdateButtons(MainMenuUpdateParams params)
+	{
+		_buttonList->Update(params.MouseCoordinates, params.MouseClicked);
 	}
 };

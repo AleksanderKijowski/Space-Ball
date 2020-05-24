@@ -38,7 +38,7 @@ public:
 	{
 		var result = _settings.FullScreenMode
 			? new sf::RenderWindow(sf::VideoMode(_settings.Width, _settings.Height), _settings.Title, sf::Style::Fullscreen)
-			: new sf::RenderWindow(sf::VideoMode(_settings.Width, _settings.Height), _settings.Title);
+			: new sf::RenderWindow(sf::VideoMode(_settings.Width, _settings.Height), _settings.Title, sf::Style::Close);
 
 		result->setFramerateLimit(_settings.FrameRateLimit);
 		result->setVerticalSyncEnabled(_settings.VerticalSyncEnabled);

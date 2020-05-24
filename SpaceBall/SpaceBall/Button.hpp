@@ -1,31 +1,13 @@
 #pragma once
 #include "stdafx.h"
 #include "IntersectionProvider.hpp"
-
-enum ButtonState
-{
-	normal,
-	hover,
-	clicked,
-};
-
-struct ButtonParams
-{
-	sf::Vector2f Size;
-	sf::Vector2f Position;
-
-	sf::Color* NormalColor;
-	sf::Color* HoverColor;
-	sf::Color* ClickedColor;
-};
+#include "ButtonState.hpp"
+#include "ButtonParams.hpp"
 
 class Button
 {
 private:
 	ButtonState _state;
-
-	sf::Vector2f _size;
-	sf::Vector2f _position;
 
 	sf::Color* _normalColor;
 	sf::Color* _hoverColor;
@@ -33,9 +15,14 @@ private:
 
 	sf::Color* _current;
 
-	sf::RectangleShape* _shape;
+	std::shared_ptr<sf::RectangleShape> _shape;
+
+	std::shared_ptr<OptionValueObject> _port;
 
 protected:
+	sf::Vector2f _size;
+	sf::Vector2f _position;
+
 public:
 	Button(ButtonParams params)
 	{
@@ -48,9 +35,11 @@ public:
 
 		_current = _normalColor;
 
-		_shape = new sf::RectangleShape(_size);
+		_shape.reset(new sf::RectangleShape(_size));
 		_shape->setPosition(_position);
 		_shape->setFillColor(*_current);
+
+		_port = params.Port;
 	}
 
 	virtual void Update(sf::Vector2i mousePosition, bool isClicked)
@@ -64,6 +53,7 @@ public:
 					_state = clicked;
 					_current = _clickedColor;
 
+					_port->SetValue();
 					ButtonStateChanged();
 				}
 			}

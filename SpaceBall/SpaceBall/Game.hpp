@@ -42,6 +42,7 @@ private:
 	
 	void Render() const
 	{
+		_context->ClearWindow();
 		_context->GetCurrentAppState()->Render();
 		_context->Display();
 	}

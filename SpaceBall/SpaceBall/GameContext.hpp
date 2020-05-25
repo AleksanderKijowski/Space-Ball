@@ -14,4 +14,9 @@ public:
 	{
 		_window->display();
 	}
+
+	void ClearWindow()
+	{
+		_window->clear();
+	}
 };

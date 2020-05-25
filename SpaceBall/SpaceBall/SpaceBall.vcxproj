@@ -140,7 +140,16 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ArgumentOutOfRangeException.hpp" />
+    <ClInclude Include="BuilderButtonSelectionList.hpp" />
+    <ClInclude Include="BuilderButtonSelectionOptions.hpp" />
+    <ClInclude Include="BuilderButtonTexts.h" />
+    <ClInclude Include="BuilderContext.hpp" />
+    <ClInclude Include="BuilderState.hpp" />
+    <ClInclude Include="BuilderStateBuilder.hpp" />
+    <ClInclude Include="BuilderUpdateParams.hpp" />
     <ClInclude Include="Button.hpp" />
+    <ClInclude Include="ButtonList.hpp" />
     <ClInclude Include="ButtonParams.hpp" />
     <ClInclude Include="ButtonState.hpp" />
     <ClInclude Include="ConfigPaths.h" />
@@ -158,11 +167,11 @@
     <ClInclude Include="IntersectionProvider.hpp" />
     <ClInclude Include="IOption.hpp" />
     <ClInclude Include="IState.hpp" />
+    <ClInclude Include="KeybindsBuilder.hpp" />
     <ClInclude Include="Logger.hpp" />
     <ClInclude Include="MainMenuButtonList.hpp" />
     <ClInclude Include="MainMenuButtonTexts.h" />
     <ClInclude Include="MainMenuContext.hpp" />
-    <ClInclude Include="MainMenuKeyBindsBuilder.hpp" />
     <ClInclude Include="MainMenuOptions.hpp" />
     <ClInclude Include="MainMenuState.hpp" />
     <ClInclude Include="MainMenuStateBuilder.hpp" />

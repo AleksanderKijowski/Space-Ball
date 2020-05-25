@@ -9,3 +9,5 @@ const string ExceptionSavingDirectoryPath = "../Logs";
 const string MainMenuKeyBindsPath = "../Configs/Main menu/Keybinds.ini";
 
 const string DefaultFontPath = "../Fonts/default.ttf";
+
+const string BuilderKeyBindsPath = "../Configs/Builder/Keybinds.ini";

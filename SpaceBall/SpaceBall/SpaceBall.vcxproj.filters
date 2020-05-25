@@ -42,6 +42,15 @@
     <Filter Include="Infrastructure\Buttons">
       <UniqueIdentifier>{ee779fe1-67c3-4bd7-9a3a-15e676cd236a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="States\Builder">
+      <UniqueIdentifier>{893f7909-c4f8-45c3-bd7e-070910623ef1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Providers\Builders\State Builders">
+      <UniqueIdentifier>{4b13933c-fb34-449d-8236-b7f6510423c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Ports">
+      <UniqueIdentifier>{0ec98b76-d9d2-4615-8204-b0efe996dcbe}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.Cpp">
@@ -109,13 +118,7 @@
     <ClInclude Include="MainMenuContext.hpp">
       <Filter>States\MainMenu</Filter>
     </ClInclude>
-    <ClInclude Include="MainMenuKeyBindsBuilder.hpp">
-      <Filter>States\MainMenu</Filter>
-    </ClInclude>
     <ClInclude Include="MainMenuUpdateParams.hpp">
-      <Filter>States\MainMenu</Filter>
-    </ClInclude>
-    <ClInclude Include="MainMenuStateBuilder.hpp">
       <Filter>States\MainMenu</Filter>
     </ClInclude>
     <ClInclude Include="GameContextShared.hpp">
@@ -123,9 +126,6 @@
     </ClInclude>
     <ClInclude Include="Button.hpp">
       <Filter>Infrastructure\Buttons</Filter>
-    </ClInclude>
-    <ClInclude Include="IntersectionProvider.hpp">
-      <Filter>Infrastructure</Filter>
     </ClInclude>
     <ClInclude Include="MainMenuButtonList.hpp">
       <Filter>States\MainMenu</Filter>
@@ -139,17 +139,53 @@
     <ClInclude Include="ButtonParams.hpp">
       <Filter>Infrastructure\Buttons</Filter>
     </ClInclude>
-    <ClInclude Include="IOption.hpp">
-      <Filter>Infrastructure\Buttons</Filter>
-    </ClInclude>
-    <ClInclude Include="MainMenuOptions.hpp">
-      <Filter>States\MainMenu</Filter>
-    </ClInclude>
     <ClInclude Include="TextButton.hpp">
       <Filter>Infrastructure\Buttons</Filter>
     </ClInclude>
     <ClInclude Include="TextButtonParams.hpp">
       <Filter>Infrastructure\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="ArgumentOutOfRangeException.hpp">
+      <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="BuilderState.hpp">
+      <Filter>States\Builder</Filter>
+    </ClInclude>
+    <ClInclude Include="BuilderContext.hpp">
+      <Filter>States\Builder</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuStateBuilder.hpp">
+      <Filter>Providers\Builders\State Builders</Filter>
+    </ClInclude>
+    <ClInclude Include="BuilderUpdateParams.hpp">
+      <Filter>States\Builder</Filter>
+    </ClInclude>
+    <ClInclude Include="ButtonList.hpp">
+      <Filter>Infrastructure\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="IOption.hpp">
+      <Filter>Infrastructure\Ports</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuOptions.hpp">
+      <Filter>Infrastructure\Ports</Filter>
+    </ClInclude>
+    <ClInclude Include="KeybindsBuilder.hpp">
+      <Filter>Providers\Builders</Filter>
+    </ClInclude>
+    <ClInclude Include="IntersectionProvider.hpp">
+      <Filter>Providers</Filter>
+    </ClInclude>
+    <ClInclude Include="BuilderButtonSelectionList.hpp">
+      <Filter>States\Builder</Filter>
+    </ClInclude>
+    <ClInclude Include="BuilderButtonSelectionOptions.hpp">
+      <Filter>Infrastructure\Ports</Filter>
+    </ClInclude>
+    <ClInclude Include="BuilderButtonTexts.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="BuilderStateBuilder.hpp">
+      <Filter>Providers\Builders\State Builders</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

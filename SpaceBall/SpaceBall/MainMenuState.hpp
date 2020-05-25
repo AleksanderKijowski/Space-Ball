@@ -2,12 +2,11 @@
 #include "IState.hpp"
 #include "MainMenuContext.hpp"
 #include "Button.hpp"
+#include "ArgumentOutOfRangeException.hpp"
+#include "BuilderStateBuilder.hpp"
 
 class MainMenuState : public IState, public MainMenuContext
 {
-private:
-	Button* button;
-
 public:
 	MainMenuState(
 		GameContextShared* context,
@@ -34,6 +33,7 @@ public:
 
 			case build:
 				_port->Reset();
+				SwitchToBuilderView();
 				break;
 
 			case settings:
@@ -46,8 +46,7 @@ public:
 
 			default:
 				_port->Reset();
-				// ToDo: Add new expetion type.
-				break;
+				throw new ArgumentOutOfRangeException("MainMenuState update.");
 		}
 	}
 
@@ -84,5 +83,10 @@ private:
 	void UpdateButtons(MainMenuUpdateParams params)
 	{
 		_buttonList->Update(params.MouseCoordinates, params.MouseClicked);
+	}
+
+	void SwitchToBuilderView()
+	{
+		_context->PushNewState(BuilderStateBuilder().Build(_context, _window, _context->GetSupportedKeys()));
 	}
 };

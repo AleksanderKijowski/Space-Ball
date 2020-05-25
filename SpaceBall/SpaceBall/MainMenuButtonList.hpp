@@ -1,16 +1,14 @@
 #pragma once
 #include "stdafx.h"
 #include "MainMenuButtonTexts.h"
-#include "TextButton.hpp"
 #include "MainMenuOptions.hpp"
 #include "FileNotFoundException.hpp"
+#include "ButtonList.hpp"
 
-class MainMenuButtonList
+class MainMenuButtonList : public ButtonList
 {
 private:
-	sf::Vector2f _scale;
-	int _quantity;
-	List<std::shared_ptr<Button>> _buttons;
+	const int Quantity = sizeof(MainMenuTexts) / sizeof(*MainMenuTexts);
 
 	sf::Color* _normalColor;
 	sf::Color* _hoverColor;
@@ -20,14 +18,10 @@ private:
 	sf::Font* _font;
 	const int _characterSize = 48;
 
-	std::shared_ptr<MainMenuOptions> _port;
-
 public:
 	MainMenuButtonList(sf::Vector2f windowSize, std::shared_ptr<MainMenuOptions> port)
+		: ButtonList(windowSize, port)
 	{
-		_scale = GetScale(windowSize);
-		_quantity = sizeof(MainMenuTexts)/sizeof(*MainMenuTexts);
-
 		_normalColor = new sf::Color(sf::Color::Blue);
 		_hoverColor = new sf::Color(sf::Color::Green);
 		_clickedColor = new sf::Color(sf::Color::Cyan);
@@ -39,8 +33,6 @@ public:
 		{
 			throw new FileNotFoundException(DefaultFontPath);
 		}
-
-		_port = port;
 
 		Initialize();
 	}
@@ -54,29 +46,9 @@ public:
 		delete _font;
 	}
 
-	void Update(sf::Vector2i mousePosition, bool isClicked)
-	{
-		for (var button : _buttons)
-		{
-			button->Update(mousePosition, isClicked);
-		}
-	}
-
-	void Render(std::shared_ptr<sf::RenderWindow> target)
-	{
-		for (var button : _buttons)
-		{
-			button->Render(target);
-		}
-	}
-
 private:
-	sf::Vector2f GetScale(sf::Vector2f windowSize)
-	{
-		return sf::Vector2f(windowSize.x / 1920, windowSize.y / 1080);
-	}
 
-	void Initialize()
+	virtual void Initialize() override
 	{
 		var buttonSize = sf::Vector2f(1920 / 6 * 2 * _scale.x, 1080 / 6 * _scale.y);
 		var buttonListPosition = sf::Vector2f(1920 / 6 * _scale.x, 1080 / 6 * _scale.y);
@@ -90,7 +62,7 @@ private:
 		params.Font = _font;
 		params.FontSize = _characterSize * _scale.y;
 
-		for (var i = 0; i < _quantity; i++)
+		for (var i = 0; i < Quantity; i++)
 		{
 			params.Position = buttonListPosition + sf::Vector2f(0, (float)i * buttonSize.y);
 			params.Text = MainMenuTexts[i];

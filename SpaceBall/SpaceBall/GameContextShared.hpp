@@ -4,6 +4,7 @@
 #include "RenderWindowBuilder.hpp"
 #include "SupportedKeysMapBuilder.hpp"
 #include "MainMenuUpdateParams.hpp"
+#include "BuilderUpdateParams.hpp"
 
 class GameContextShared
 {
@@ -61,8 +62,18 @@ public:
 		_statesStack->push(state);
 	}
 
+	std::shared_ptr<Map<string, int>> GetSupportedKeys() const
+	{
+		return _supportedKeys;
+	}
+
 	MainMenuUpdateParams GetMainMenuUpdateParams() const
 	{
 		return MainMenuUpdateParams(sf::Mouse::isButtonPressed(sf::Mouse::Left), sf::Mouse::getPosition(*_window));
+	}
+
+	BuilderUpdateParams GetBuilderUpdateParams() const
+	{
+		return BuilderUpdateParams(sf::Mouse::isButtonPressed(sf::Mouse::Left), sf::Mouse::getPosition(*_window));
 	}
 };

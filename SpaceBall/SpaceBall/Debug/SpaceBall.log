@@ -1,9 +1,15 @@
 ﻿  Main.Cpp
 C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\IntersectionProvider.hpp(12,2): warning C4091: 'static ': ignored on left of 'IntersectionProvider' when no variable is declared
-C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\MainMenuButtonList.hpp(91,36): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\MainMenuButtonList.hpp(63,36): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\BuilderButtonSelectionList.hpp(82,36): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\BuilderStateBuilder.hpp(17,2): warning C4091: 'static ': ignored on left of 'BuilderStateBuilder' when no variable is declared
 C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\MainMenuStateBuilder.hpp(17,2): warning C4091: 'static ': ignored on left of 'MainMenuStateBuilder' when no variable is declared
   SpaceBall.vcxproj -> C:\Users\07ole\source\repos\Space-Ball\SpaceBall\Debug\SpaceBall.exe

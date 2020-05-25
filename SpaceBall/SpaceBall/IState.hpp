@@ -1,19 +1,12 @@
 #pragma once
 #include "stdafx.h"
 
-class GameContext;
-
 class IState
 {
-private:
-	GameContext* _context;
+protected:
+	IState() = default;
 	
 public:
-	IState(GameContext* context)
-	{
-		_context = context;
-	}
-	
 	virtual ~IState() = default;
 
 	virtual void Update() abstract;

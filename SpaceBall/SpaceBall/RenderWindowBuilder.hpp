@@ -13,10 +13,11 @@ private:
 		int Height;
 		int FrameRateLimit;
 		bool VerticalSyncEnabled;
+		bool FullScreenMode;
 		string Title;
 
-		WindowSettings(int width, int height, int frameRateLimit, bool verticalSyncEnabled, string title)
-			: Width(width), Height(height), FrameRateLimit(frameRateLimit), VerticalSyncEnabled(verticalSyncEnabled), Title(title)
+		WindowSettings(int width, int height, int frameRateLimit, bool verticalSyncEnabled, bool fullScreenMode, string title)
+			: Width(width), Height(height), FrameRateLimit(frameRateLimit), VerticalSyncEnabled(verticalSyncEnabled), FullScreenMode(fullScreenMode), Title(title)
 		{
 		}
 
@@ -35,9 +36,14 @@ public:
 
 	sf::RenderWindow* BuildRenderWindow()
 	{
-		var result = new sf::RenderWindow(sf::VideoMode(_settings.Width, _settings.Height), _settings.Title);
+		var result = _settings.FullScreenMode
+			? new sf::RenderWindow(sf::VideoMode(_settings.Width, _settings.Height), _settings.Title, sf::Style::Fullscreen)
+			: new sf::RenderWindow(sf::VideoMode(_settings.Width, _settings.Height), _settings.Title, sf::Style::Close);
+
 		result->setFramerateLimit(_settings.FrameRateLimit);
 		result->setVerticalSyncEnabled(_settings.VerticalSyncEnabled);
+		result->clear();
+		result->display();
 
 		return result != nullptr ? result : throw new FailedWindowInitializationFailedException();
 	}
@@ -54,9 +60,10 @@ private:
 			int height = 0;
 			int frameRateLimit = 0;
 			bool verticalSyncEnabled = false;
+			bool fullScreenMode = false;
 			string title = "";
 
-			if (settingsFile >> width >> height >> frameRateLimit >> verticalSyncEnabled)
+			if (settingsFile >> width >> height >> frameRateLimit >> verticalSyncEnabled >> fullScreenMode)
 			{
 				string temp = "";
 				while (settingsFile >> temp)
@@ -65,7 +72,7 @@ private:
 					temp = "";
 				}
 
-				_settings = WindowSettings(width, height, frameRateLimit, verticalSyncEnabled, title);
+				_settings = WindowSettings(width, height, frameRateLimit, verticalSyncEnabled, fullScreenMode, title);
 			}
 			else
 			{

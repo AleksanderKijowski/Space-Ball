@@ -7,7 +7,7 @@ class Game
 {
 private:
 	std::unique_ptr<IExceptionHandler> _exceptionHandler;
-	std::unique_ptr<GameContext> _context;
+	std::shared_ptr<GameContext> _context;
 
 public:
 	Game()
@@ -43,10 +43,13 @@ private:
 	void Render() const
 	{
 		_context->GetCurrentAppState()->Render();
+		_context->Display();
 	}
 
 	void RunGameLoop() const
 	{
+		_context->PushMainMenuState();
+
 		while (!_context->IsAppEnding())
 		{
 			_context->UpdateEvents();

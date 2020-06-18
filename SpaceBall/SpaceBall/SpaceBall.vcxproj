@@ -134,6 +134,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.Cpp" />
+    <ClCompile Include="GameStateContext.hpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -141,18 +142,27 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArgumentOutOfRangeException.hpp" />
+    <ClInclude Include="Ball.hpp" />
+    <ClInclude Include="BuilderButtonGridOption.hpp" />
     <ClInclude Include="BuilderButtonSelectionList.hpp" />
     <ClInclude Include="BuilderButtonSelectionOptions.hpp" />
-    <ClInclude Include="BuilderButtonTexts.h" />
+    <ClInclude Include="BuilderGenerateButtonBuilder.hpp" />
+    <ClInclude Include="BuilderGenerateOption.hpp" />
+    <ClInclude Include="BuilderResources.h" />
     <ClInclude Include="BuilderContext.hpp" />
     <ClInclude Include="BuilderState.hpp" />
     <ClInclude Include="BuilderStateBuilder.hpp" />
     <ClInclude Include="BuilderUpdateParams.hpp" />
     <ClInclude Include="Button.hpp" />
+    <ClInclude Include="ButtonGrid.hpp" />
     <ClInclude Include="ButtonList.hpp" />
     <ClInclude Include="ButtonParams.hpp" />
+    <ClInclude Include="ButtonSelectionField.hpp" />
     <ClInclude Include="ButtonState.hpp" />
+    <ClInclude Include="Collider.hpp" />
     <ClInclude Include="ConfigPaths.h" />
+    <ClInclude Include="Counter.hpp" />
+    <ClInclude Include="CounterPort.hpp" />
     <ClInclude Include="DateTimeProvider.hpp" />
     <ClInclude Include="Exception.hpp" />
     <ClInclude Include="ExceptionHandler.hpp" />
@@ -162,12 +172,22 @@
     <ClInclude Include="Game.hpp" />
     <ClInclude Include="GameContext.hpp" />
     <ClInclude Include="GameContextShared.hpp" />
+    <ClInclude Include="GameState.hpp" />
+    <ClInclude Include="GameStateBuilder.hpp" />
+    <ClInclude Include="GameStateResources.h" />
+    <ClInclude Include="GameStateUpdateParams.hpp" />
+    <ClInclude Include="GridButton.hpp" />
     <ClInclude Include="IExceptionHandler.hpp" />
     <ClInclude Include="ILogger.hpp" />
     <ClInclude Include="IntersectionProvider.hpp" />
     <ClInclude Include="IOption.hpp" />
     <ClInclude Include="IState.hpp" />
     <ClInclude Include="KeybindsBuilder.hpp" />
+    <ClInclude Include="Level.hpp" />
+    <ClInclude Include="LevelBuilder.hpp" />
+    <ClInclude Include="LevelSelectionContext.hpp" />
+    <ClInclude Include="LevelSelectionState.hpp" />
+    <ClInclude Include="LevelSelectionStateBuilder.hpp" />
     <ClInclude Include="Logger.hpp" />
     <ClInclude Include="MainMenuButtonList.hpp" />
     <ClInclude Include="MainMenuButtonTexts.h" />
@@ -176,11 +196,20 @@
     <ClInclude Include="MainMenuState.hpp" />
     <ClInclude Include="MainMenuStateBuilder.hpp" />
     <ClInclude Include="MainMenuUpdateParams.hpp" />
+    <ClInclude Include="MessageBoxContext.hpp" />
+    <ClInclude Include="MessageBoxOptions.hpp" />
+    <ClInclude Include="MessageBoxState.hpp" />
+    <ClInclude Include="Player.hpp" />
     <ClInclude Include="RenderWindowBuilder.hpp" />
+    <ClInclude Include="ScaleProvide.hpp" />
+    <ClInclude Include="SpriteSizeProvider.hpp" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="SupportedKeysMapBuilder.hpp" />
     <ClInclude Include="TextButton.hpp" />
     <ClInclude Include="TextButtonParams.hpp" />
+    <ClInclude Include="TextureButton.hpp" />
+    <ClInclude Include="TextureButtonParams.hpp" />
+    <ClInclude Include="Tile.hpp" />
     <ClInclude Include="WrongFileContentException.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

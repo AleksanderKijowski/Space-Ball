@@ -22,10 +22,10 @@ public:
 	MainMenuButtonList(sf::Vector2f windowSize, std::shared_ptr<MainMenuOptions> port)
 		: ButtonList(windowSize, port)
 	{
-		_normalColor = new sf::Color(sf::Color::Blue);
-		_hoverColor = new sf::Color(sf::Color::Green);
-		_clickedColor = new sf::Color(sf::Color::Cyan);
-		_textColor = new sf::Color(sf::Color::White);
+		_normalColor = new sf::Color(sf::Color::Transparent);
+		_hoverColor = new sf::Color(128, 128, 128, 128);
+		_clickedColor = new sf::Color(sf::Color::Transparent);
+		_textColor = new sf::Color(sf::Color::Black);
 
 		_font = new sf::Font();
 		

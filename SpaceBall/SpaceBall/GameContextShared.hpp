@@ -5,15 +5,21 @@
 #include "SupportedKeysMapBuilder.hpp"
 #include "MainMenuUpdateParams.hpp"
 #include "BuilderUpdateParams.hpp"
+#include "GameStateUpdateParams.hpp"
 
 class GameContextShared
 {
 protected:
+	const float DelayBeetweenInputsWhenSwitchingStatesInSeconds = 0.5;
 	std::shared_ptr<sf::RenderWindow> _window;
 	std::unique_ptr<Stack<std::shared_ptr<IState>>> _statesStack;
 	std::shared_ptr<Map<string, int>> _supportedKeys;
 
 	bool _appEnding = false;
+
+	sf::Clock _clock;
+	float _elapsedTime;
+	bool _isReadyToReceiveInput;
 
 
 	void UpdateAppEnding()
@@ -28,6 +34,10 @@ public:
 		_window.reset(RenderWindowBuilder().BuildRenderWindow());
 		_supportedKeys.reset(SupportedKeysMapBuilder().BuildSupportedKeysMap());
 		_statesStack.reset(new Stack<std::shared_ptr<IState>>());
+
+		_clock.restart();
+		_elapsedTime = 0;
+		_isReadyToReceiveInput = false;
 	}
 
 	~GameContextShared() = default;
@@ -57,9 +67,36 @@ public:
 		}
 	}
 
+	void PopState()
+	{
+		_statesStack->pop();
+		StateChanged();
+		UpdateAppEnding();
+	}
+
 	void PushNewState(std::shared_ptr<IState> state)
 	{
 		_statesStack->push(state);
+		StateChanged();
+	}
+
+	void UpdateClock()
+	{
+		if (_isReadyToReceiveInput)
+		{
+			_elapsedTime = _clock.getElapsedTime().asSeconds();
+		}
+		else
+		{
+			_elapsedTime += _clock.getElapsedTime().asSeconds();
+			if (_elapsedTime > DelayBeetweenInputsWhenSwitchingStatesInSeconds)
+			{
+				_elapsedTime = 0;
+				_isReadyToReceiveInput = true;
+			}
+		}
+
+		_clock.restart();
 	}
 
 	std::shared_ptr<Map<string, int>> GetSupportedKeys() const
@@ -75,5 +112,15 @@ public:
 	BuilderUpdateParams GetBuilderUpdateParams() const
 	{
 		return BuilderUpdateParams(sf::Mouse::isButtonPressed(sf::Mouse::Left), sf::Mouse::getPosition(*_window));
+	}
+
+	GameStateUpdateParams GetGameStateUpdateParams() const
+	{
+		return GameStateUpdateParams(_elapsedTime);
+	}
+
+protected:
+	virtual void StateChanged()
+	{
 	}
 };

@@ -43,6 +43,7 @@ private:
 	void Render() const
 	{
 		_context->ClearWindow();
+		_context->RenderBackground();
 		_context->GetCurrentAppState()->Render();
 		_context->Display();
 	}
@@ -54,7 +55,13 @@ private:
 		while (!_context->IsAppEnding())
 		{
 			_context->UpdateEvents();
-			Update();
+			_context->UpdateClock();
+
+			if (_context->CanReveiveInput())
+			{
+				Update();
+			}
+
 			Render();
 		}
 	}

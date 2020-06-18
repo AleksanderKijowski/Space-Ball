@@ -4,6 +4,7 @@
 #include "GameContextShared.hpp"
 #include "MainMenuButtonList.hpp"
 #include "MainMenuOptions.hpp"
+#include "MessageBoxState.hpp"
 
 class MainMenuContext
 {
@@ -14,6 +15,7 @@ protected:
 	std::shared_ptr<MainMenuButtonList> _buttonList;
 
 	std::shared_ptr<MainMenuOptions> _port;
+	std::shared_ptr<MessageBoxOptions> _exitPort;
 
 	MainMenuContext(
 		GameContextShared* context,
@@ -23,6 +25,7 @@ protected:
 		_context = context;
 		_window = window;
 		_port.reset(new MainMenuOptions());
+		_exitPort.reset(new MessageBoxOptions());
 		_keyBinds.reset(KeyBindsBuilder().Build(supportedKeys, MainMenuKeyBindsPath));
 		_buttonList.reset(new MainMenuButtonList(sf::Vector2f(_window->getSize()), _port));
 	}

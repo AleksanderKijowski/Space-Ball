@@ -2,6 +2,7 @@
 #include "stdafx.h"
 #include "TextButton.hpp"
 #include "FileNotFoundException.hpp"
+#include "ScaleProvide.hpp"
 
 class ButtonList
 {
@@ -14,7 +15,7 @@ protected:
 public:
 	ButtonList(sf::Vector2f windowSize, std::shared_ptr<IOption> port)
 	{
-		_scale = GetScale(windowSize);
+		_scale = ScaleProvider::Get(windowSize);
 
 		_port = port;
 	}
@@ -38,10 +39,5 @@ public:
 	}
 
 protected:
-	sf::Vector2f GetScale(sf::Vector2f windowSize)
-	{
-		return sf::Vector2f(windowSize.x / 1920, windowSize.y / 1080);
-	}
-
 	virtual void Initialize() abstract;
 };

@@ -5,6 +5,10 @@
 enum BuilderButtonSelectionOption
 {
 	notSelected,
+	blueTile,
+	yellowTile,
+	brick,
+	tile,
 };
 
 class BuilderButtonSelectionOptions : public IOption
@@ -19,12 +23,28 @@ public:
 
 		switch (value)
 		{
-		case 0:
-			Option = notSelected;
-			break;
+			case 0:
+				Option = notSelected;
+				break;
 
-		default:
-			throw  new ArgumentOutOfRangeException("BuilderButtonSelectionOptions for value: " + std::to_string(value));
+			case 1:
+				Option = blueTile;
+				break;
+
+			case 2:
+				Option = yellowTile;
+				break;
+
+			case 3:
+				Option = brick;
+				break;
+
+			case 4:
+				Option = tile;
+				break;
+
+			default:
+				throw  new ArgumentOutOfRangeException("BuilderButtonSelectionOptions for value: " + std::to_string(value));
 		}
 	}
 

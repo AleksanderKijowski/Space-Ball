@@ -21,12 +21,6 @@
     <Filter Include="Precompiled headers">
       <UniqueIdentifier>{78ffab35-b31b-4904-b900-51375fd00d63}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Infrastructure\Exception Handler">
-      <UniqueIdentifier>{db4ed758-17c9-447d-b465-2b83c81c81bf}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Infrastructure\Logger">
-      <UniqueIdentifier>{65c4727c-5243-43da-a9f6-bc9f7160082d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Providers">
       <UniqueIdentifier>{875ba8e4-b3cd-460e-9c46-bb4887e999d4}</UniqueIdentifier>
     </Filter>
@@ -42,6 +36,33 @@
     <Filter Include="Infrastructure\Buttons">
       <UniqueIdentifier>{ee779fe1-67c3-4bd7-9a3a-15e676cd236a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="States\Builder">
+      <UniqueIdentifier>{893f7909-c4f8-45c3-bd7e-070910623ef1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Providers\Builders\State Builders">
+      <UniqueIdentifier>{4b13933c-fb34-449d-8236-b7f6510423c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Ports">
+      <UniqueIdentifier>{0ec98b76-d9d2-4615-8204-b0efe996dcbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="States\MessageBox State">
+      <UniqueIdentifier>{0e73bf2e-5489-4adf-9927-54400f5940df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="States\LevelSelectionState">
+      <UniqueIdentifier>{bf712b09-f557-4b75-adf6-551304118bb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Counters">
+      <UniqueIdentifier>{54bdeefc-3d6c-4bb6-bd7e-a42c3076a72f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Exception Handlers">
+      <UniqueIdentifier>{db4ed758-17c9-447d-b465-2b83c81c81bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Loggers">
+      <UniqueIdentifier>{65c4727c-5243-43da-a9f6-bc9f7160082d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="States\GameState">
+      <UniqueIdentifier>{420a5a33-5617-40ac-b479-2e98a5591fe3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.Cpp">
@@ -49,6 +70,9 @@
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
       <Filter>Precompiled headers</Filter>
+    </ClCompile>
+    <ClCompile Include="GameStateContext.hpp">
+      <Filter>States\GameState</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -59,10 +83,10 @@
       <Filter>Resources</Filter>
     </ClInclude>
     <ClInclude Include="ExceptionHandler.hpp">
-      <Filter>Infrastructure\Exception Handler</Filter>
+      <Filter>Infrastructure\Exception Handlers</Filter>
     </ClInclude>
     <ClInclude Include="IExceptionHandler.hpp">
-      <Filter>Infrastructure\Exception Handler</Filter>
+      <Filter>Infrastructure\Exception Handlers</Filter>
     </ClInclude>
     <ClInclude Include="FailedWindowInitializationException.hpp">
       <Filter>Exceptions</Filter>
@@ -77,10 +101,10 @@
       <Filter>Exceptions</Filter>
     </ClInclude>
     <ClInclude Include="ILogger.hpp">
-      <Filter>Infrastructure\Logger</Filter>
+      <Filter>Infrastructure\Loggers</Filter>
     </ClInclude>
     <ClInclude Include="Logger.hpp">
-      <Filter>Infrastructure\Logger</Filter>
+      <Filter>Infrastructure\Loggers</Filter>
     </ClInclude>
     <ClInclude Include="SupportedKeysMapBuilder.hpp">
       <Filter>Providers\Builders</Filter>
@@ -109,13 +133,7 @@
     <ClInclude Include="MainMenuContext.hpp">
       <Filter>States\MainMenu</Filter>
     </ClInclude>
-    <ClInclude Include="MainMenuKeyBindsBuilder.hpp">
-      <Filter>States\MainMenu</Filter>
-    </ClInclude>
     <ClInclude Include="MainMenuUpdateParams.hpp">
-      <Filter>States\MainMenu</Filter>
-    </ClInclude>
-    <ClInclude Include="MainMenuStateBuilder.hpp">
       <Filter>States\MainMenu</Filter>
     </ClInclude>
     <ClInclude Include="GameContextShared.hpp">
@@ -123,9 +141,6 @@
     </ClInclude>
     <ClInclude Include="Button.hpp">
       <Filter>Infrastructure\Buttons</Filter>
-    </ClInclude>
-    <ClInclude Include="IntersectionProvider.hpp">
-      <Filter>Infrastructure</Filter>
     </ClInclude>
     <ClInclude Include="MainMenuButtonList.hpp">
       <Filter>States\MainMenu</Filter>
@@ -139,17 +154,137 @@
     <ClInclude Include="ButtonParams.hpp">
       <Filter>Infrastructure\Buttons</Filter>
     </ClInclude>
-    <ClInclude Include="IOption.hpp">
-      <Filter>Infrastructure\Buttons</Filter>
-    </ClInclude>
-    <ClInclude Include="MainMenuOptions.hpp">
-      <Filter>States\MainMenu</Filter>
-    </ClInclude>
     <ClInclude Include="TextButton.hpp">
       <Filter>Infrastructure\Buttons</Filter>
     </ClInclude>
     <ClInclude Include="TextButtonParams.hpp">
       <Filter>Infrastructure\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="ArgumentOutOfRangeException.hpp">
+      <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="BuilderState.hpp">
+      <Filter>States\Builder</Filter>
+    </ClInclude>
+    <ClInclude Include="BuilderContext.hpp">
+      <Filter>States\Builder</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuStateBuilder.hpp">
+      <Filter>Providers\Builders\State Builders</Filter>
+    </ClInclude>
+    <ClInclude Include="BuilderUpdateParams.hpp">
+      <Filter>States\Builder</Filter>
+    </ClInclude>
+    <ClInclude Include="ButtonList.hpp">
+      <Filter>Infrastructure\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="IOption.hpp">
+      <Filter>Infrastructure\Ports</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuOptions.hpp">
+      <Filter>Infrastructure\Ports</Filter>
+    </ClInclude>
+    <ClInclude Include="KeybindsBuilder.hpp">
+      <Filter>Providers\Builders</Filter>
+    </ClInclude>
+    <ClInclude Include="IntersectionProvider.hpp">
+      <Filter>Providers</Filter>
+    </ClInclude>
+    <ClInclude Include="BuilderButtonSelectionList.hpp">
+      <Filter>States\Builder</Filter>
+    </ClInclude>
+    <ClInclude Include="BuilderButtonSelectionOptions.hpp">
+      <Filter>Infrastructure\Ports</Filter>
+    </ClInclude>
+    <ClInclude Include="BuilderStateBuilder.hpp">
+      <Filter>Providers\Builders\State Builders</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureButton.hpp">
+      <Filter>Infrastructure\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="BuilderResources.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureButtonParams.hpp">
+      <Filter>Infrastructure\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="ButtonSelectionField.hpp">
+      <Filter>States\Builder</Filter>
+    </ClInclude>
+    <ClInclude Include="ScaleProvide.hpp">
+      <Filter>Providers</Filter>
+    </ClInclude>
+    <ClInclude Include="ButtonGrid.hpp">
+      <Filter>States\Builder</Filter>
+    </ClInclude>
+    <ClInclude Include="GridButton.hpp">
+      <Filter>Infrastructure\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="BuilderButtonGridOption.hpp">
+      <Filter>Infrastructure\Ports</Filter>
+    </ClInclude>
+    <ClInclude Include="BuilderGenerateOption.hpp">
+      <Filter>Infrastructure\Ports</Filter>
+    </ClInclude>
+    <ClInclude Include="BuilderGenerateButtonBuilder.hpp">
+      <Filter>States\Builder</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelBuilder.hpp">
+      <Filter>Providers</Filter>
+    </ClInclude>
+    <ClInclude Include="MessageBoxState.hpp">
+      <Filter>States\MessageBox State</Filter>
+    </ClInclude>
+    <ClInclude Include="MessageBoxContext.hpp">
+      <Filter>States\MessageBox State</Filter>
+    </ClInclude>
+    <ClInclude Include="MessageBoxOptions.hpp">
+      <Filter>Infrastructure\Ports</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelSelectionState.hpp">
+      <Filter>States\LevelSelectionState</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelSelectionContext.hpp">
+      <Filter>States\LevelSelectionState</Filter>
+    </ClInclude>
+    <ClInclude Include="Counter.hpp">
+      <Filter>Infrastructure\Counters</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelSelectionStateBuilder.hpp">
+      <Filter>Providers\Builders\State Builders</Filter>
+    </ClInclude>
+    <ClInclude Include="CounterPort.hpp">
+      <Filter>Infrastructure\Ports</Filter>
+    </ClInclude>
+    <ClInclude Include="Level.hpp">
+      <Filter>Infrastructure</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState.hpp">
+      <Filter>States\GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="GameStateBuilder.hpp">
+      <Filter>Providers\Builders\State Builders</Filter>
+    </ClInclude>
+    <ClInclude Include="Tile.hpp">
+      <Filter>Infrastructure</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.hpp">
+      <Filter>Infrastructure</Filter>
+    </ClInclude>
+    <ClInclude Include="GameStateResources.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="GameStateUpdateParams.hpp">
+      <Filter>States\GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="Ball.hpp">
+      <Filter>Infrastructure</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteSizeProvider.hpp">
+      <Filter>Providers</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider.hpp">
+      <Filter>Infrastructure</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

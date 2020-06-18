@@ -6,22 +6,21 @@
 
 class Button
 {
-private:
-	ButtonState _state;
-
+protected:
 	sf::Color* _normalColor;
 	sf::Color* _hoverColor;
 	sf::Color* _clickedColor;
 
-	sf::Color* _current;
-
 	std::shared_ptr<sf::RectangleShape> _shape;
 
-	std::shared_ptr<OptionValueObject> _port;
+	ButtonState _state;
 
-protected:
+	sf::Color* _current;
+
 	sf::Vector2f _size;
 	sf::Vector2f _position;
+
+	std::shared_ptr<OptionValueObject> _port;
 
 public:
 	Button(ButtonParams params)
@@ -37,7 +36,11 @@ public:
 
 		_shape.reset(new sf::RectangleShape(_size));
 		_shape->setPosition(_position);
-		_shape->setFillColor(*_current);
+
+		if (_current != nullptr)
+		{
+			_shape->setFillColor(*_current);
+		}
 
 		_port = params.Port;
 	}

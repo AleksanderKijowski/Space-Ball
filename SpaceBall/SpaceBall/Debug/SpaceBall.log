@@ -1,9 +1,139 @@
-﻿  Main.Cpp
+﻿  stdafx.cpp
+  Main.Cpp
 C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\IntersectionProvider.hpp(12,2): warning C4091: 'static ': ignored on left of 'IntersectionProvider' when no variable is declared
-C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\MainMenuButtonList.hpp(91,36): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\ScaleProvide.hpp(14,2): warning C4091: 'static ': ignored on left of 'ScaleProvider' when no variable is declared
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\MainMenuButtonList.hpp(63,36): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\ButtonSelectionField.hpp(95,36): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\BuilderStateBuilder.hpp(17,2): warning C4091: 'static ': ignored on left of 'BuilderStateBuilder' when no variable is declared
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\Counter.hpp(114,14): warning C4018: '<': signed/unsigned mismatch
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\Ball.hpp(143,106): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\Ball.hpp(143,62): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\Ball.hpp(144,66): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\Ball.hpp(148,65): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\Ball.hpp(160,44): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\Ball.hpp(159,44): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\GameStateContext.hpp(138,65): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\GameStateContext.hpp(138,50): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\GameStateContext.hpp(149,65): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\GameStateContext.hpp(149,50): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\GameStateBuilder.hpp(18,2): warning C4091: 'static ': ignored on left of 'GameStateBuilder' when no variable is declared
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\LevelSelectionStateBuilder.hpp(17,2): warning C4091: 'static ': ignored on left of 'LevelSelectionStateBuilder' when no variable is declared
 C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\MainMenuStateBuilder.hpp(17,2): warning C4091: 'static ': ignored on left of 'MainMenuStateBuilder' when no variable is declared
+  GameStateContext.hpp
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\ScaleProvide.hpp(14,2): warning C4091: 'static ': ignored on left of 'ScaleProvider' when no variable is declared
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\Ball.hpp(143,106): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\Ball.hpp(143,62): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\Ball.hpp(144,66): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\Ball.hpp(148,65): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\Ball.hpp(160,44): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\Ball.hpp(159,44): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\GameStateContext.hpp(138,65): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\GameStateContext.hpp(138,50): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\GameStateContext.hpp(149,65): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\07ole\source\repos\Space-Ball\SpaceBall\SpaceBall\GameStateContext.hpp(149,50): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+  Generating Code...
   SpaceBall.vcxproj -> C:\Users\07ole\source\repos\Space-Ball\SpaceBall\Debug\SpaceBall.exe

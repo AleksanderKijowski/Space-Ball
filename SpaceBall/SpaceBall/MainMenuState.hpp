@@ -2,12 +2,12 @@
 #include "IState.hpp"
 #include "MainMenuContext.hpp"
 #include "Button.hpp"
+#include "ArgumentOutOfRangeException.hpp"
+#include "BuilderStateBuilder.hpp"
+#include "LevelSelectionStateBuilder.hpp"
 
 class MainMenuState : public IState, public MainMenuContext
 {
-private:
-	Button* button;
-
 public:
 	MainMenuState(
 		GameContextShared* context,
@@ -29,11 +29,13 @@ public:
 				break;
 
 			case newGame:
+				SwitchToLevelSelectionView();
 				_port->Reset();
 				break;
 
 			case build:
 				_port->Reset();
+				SwitchToBuilderView();
 				break;
 
 			case settings:
@@ -46,8 +48,7 @@ public:
 
 			default:
 				_port->Reset();
-				// ToDo: Add new expetion type.
-				break;
+				throw new ArgumentOutOfRangeException("MainMenuState update.");
 		}
 	}
 
@@ -67,8 +68,26 @@ private:
 
 	void ExitKeyPressed()
 	{
-		// ToDo: Add message box and then switch to exit or reset port
-		_window->close();
+		if (_exitPort->Get() == zero)
+		{
+			_context->PushNewState(std::shared_ptr<MessageBoxState>(new MessageBoxState(
+				_context,
+				_window,
+				_context->GetSupportedKeys(),
+				_exitPort,
+				"Do you want to exit?",
+				"Yes",
+				"No")));
+		}
+		else if (_exitPort->Get() == first)
+		{
+			_window->close();
+		}
+		else if (_exitPort->Get() == second)
+		{
+			_port->Reset();
+			_exitPort->Reset();
+		}
 	}
 
 	void UpdateKeys()
@@ -81,8 +100,19 @@ private:
 			}
 		}
 	}
+
 	void UpdateButtons(MainMenuUpdateParams params)
 	{
 		_buttonList->Update(params.MouseCoordinates, params.MouseClicked);
+	}
+
+	void SwitchToBuilderView()
+	{
+		_context->PushNewState(BuilderStateBuilder().Build(_context, _window, _context->GetSupportedKeys()));
+	}
+
+	void SwitchToLevelSelectionView()
+	{
+		_context->PushNewState(LevelSelectionStateBuilder().Build(_context, _window, _context->GetSupportedKeys()));
 	}
 };

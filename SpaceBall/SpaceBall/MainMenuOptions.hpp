@@ -1,5 +1,6 @@
 #pragma once
 #include "IOption.hpp"
+#include "ArgumentOutOfRangeException.hpp"
 
 enum MainMenuOption
 {
@@ -43,8 +44,7 @@ public:
 				break;
 
 			default:
-				// ToDo: Add new exception
-				break;
+				throw  new ArgumentOutOfRangeException("MainMenuOptions for value: " + std::to_string(value));
 		}
 	}
 

@@ -1,13 +1,13 @@
 #pragma once
 #include "FileNotFoundException.hpp"
 
-class MainMenuKeyBindsBuilder
+class KeyBindsBuilder
 {
 public:
-	MainMenuKeyBindsBuilder() = default;
-	Map<string, int>* Build(std::shared_ptr<Map<string, int>> supportedKeys)
+	KeyBindsBuilder() = default;
+
+	Map<string, int>* Build(std::shared_ptr<Map<string, int>> supportedKeys, const string path)
 	{
-		var path = MainMenuKeyBindsPath;
 		var file = std::ifstream(path);
 		if (file.is_open())
 		{
